@@ -6573,11 +6573,11 @@ JOIN
 -- select * from payments;
 
 -- ------------------------------------------------------------------------------
-Set FOREIGN_KEY_CHECKS = 0;
+Set FOREIGN_KEY_CHECKS = 0; -- we used this query for disable fk key for Database
 -- TRUNCATE TABLE emp_main;
 
 -- Truncate emp_main table if needed
-TRUNCATE TABLE emp_main;
+TRUNCATE TABLE emp_main; -- we used this query for removed data from emp_main if data exist
 
 -- Insert 100 Indian-origin employees
 INSERT INTO emp_main (f_name, l_name, email, phone, fk_job_main_id, fk_str_main_id, hire_date, term_date, is_term)
@@ -6725,7 +6725,7 @@ VALUES
 ('Daniel', 'Lee', 'daniel.lee@example.com', '1-234-567-8958', 19, 19, '2027-03-01', NULL, 0),
 ('Ella', 'Walker', 'ella.walker@example.com', '1-234-567-8959', 18, 20, '2027-04-01', NULL, 0);
 
-Set FOREIGN_KEY_CHECKS = 1;
+Set FOREIGN_KEY_CHECKS = 1; -- after inserted all valuse in emp_main we enble fk key checkes for db
 -- ---------------------------------------------------------------------------------------
 -- truncate table payroll_main;
 -- Insert into payroll_main table based on emp_main table entries
